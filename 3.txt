@@ -1,0 +1,17 @@
+A experiência avaliou o impacto da variação do parâmetro min_samples_split na performance do modelo da árvore de decisão (?)
+
+O parâmetro min_samples_split controla o minimo de amostras necessarias para dividir o nó interno numa árvore de decisão.
+Valores mais baixo(ex: 2) permitem que a arvore faça divisoes com menos data points, o que resulta num arvore complexa e profunda.
+Valores mais altos(ex: 100) restringem a habilidade da árvore de dividir, o que resulta num modelo mais simples e pouco profundo.
+
+min_samples_split altos (ex: 100): a árvore de decisãoe é obrigada a ser mais simples, pois sao permitidas menos divisoes. Isto reduz o risco de overfitting, mas pode causar underfitting, em que o modelo nao consegue captar padroes essenciais dos dados, resultando numa baixa accuracy nos datasets de treino e de teste.
+
+Em cenarios com min_samples_split baixo, a árvore de decisão mostrou accuracy de treino alta mas accuracy de teste significativamente mais baixa (indica overfitting). Isto sugere que a complexidade do modelo permite que ele performe bem em dados conhecidos mas mal em desconhecidos.
+
+À medida que o min_samples_split aumentou, a accuracy de treino diminuiu constantemente, indicando que a simplicidade do modelo limitou a sua habilidade de captar(?) a complexidade dos dados.
+
+Accuracy de treino: existe uma clara tendencia a diminuir à medida que o min_samples_split aumenta, refletindo a complexidade reduzida do modelo.
+
+Accuracy de teste: no geral aumenta ou estabiliza com o aumento de min_samples_split,  indicating enhanced generalization (??????). 
+
+O intervalo entre accuracy de treino e de teste diminui com o aumento de min_samples_split, o que sugere um equilibrio entre complexidade do modelo e generalization (?)
